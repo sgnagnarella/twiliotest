@@ -18,7 +18,7 @@ namespace Services
             context.Response.ContentType = "text/xml";
             context.Response.ContentEncoding = System.Text.Encoding.UTF8;
             var twiml = new Twilio.TwiML.TwilioResponse();
-            twiml.Dial("QueueDemo");
+            twiml.Dial(new Twilio.TwiML.Queue("QueueDemo"));
             context.Response.Write(twiml.ToString());
             context.Response.End(); 
         }
