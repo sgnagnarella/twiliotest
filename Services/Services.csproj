@@ -117,6 +117,9 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Agent.ashx.cs">
+      <DependentUpon>Agent.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Call.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Agent.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
