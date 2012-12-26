@@ -57,6 +57,9 @@
     <Reference Include="Twilio.Api">
       <HintPath>packages\Twilio.3.5.6\lib\3.5\Twilio.Api.dll</HintPath>
     </Reference>
+    <Reference Include="Twilio.Twiml">
+      <HintPath>packages\Twilio.TwiML.3.2.0\lib\3.5\Twilio.Twiml.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -132,8 +135,8 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="TwilioServices.ashx.cs">
-      <DependentUpon>TwilioServices.ashx</DependentUpon>
+    <Compile Include="Call.ashx.cs">
+      <DependentUpon>Call.ashx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -147,7 +150,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TwilioServices.ashx" />
+    <Content Include="Call.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
