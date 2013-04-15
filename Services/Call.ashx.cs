@@ -15,6 +15,8 @@ namespace Services
 
         public void ProcessRequest(HttpContext context)
         {
+            string customerPhone = context.Request.QueryString.Get("customerPhone");
+
             context.Response.Clear();
             context.Response.ContentType = "text/xml";
             context.Response.ContentEncoding = System.Text.Encoding.UTF8;
@@ -23,7 +25,7 @@ namespace Services
             //twiml.Say("Hello Seba");
             //twiml.Enqueue("QueueDemo");
 
-            DialCallProperties cp = new DialCallProperties("+17205456009");
+            DialCallProperties cp = new DialCallProperties(customerPhone);
 
             twiml.Dial("+17202822742", cp);
 
