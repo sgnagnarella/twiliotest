@@ -23,7 +23,10 @@ namespace Services
             //twiml.Say("Hello Seba");
             //twiml.Enqueue("QueueDemo");
 
-            twiml.Dial("+17202822742", "callerId=+17205456009'");
+            DialCallProperties cp = new DialCallProperties("+17205456009");
+
+            twiml.Dial("+17202822742", cp);
+
             context.Response.Write(twiml.ToString());
             context.Response.End(); 
             //string accountSid = "AC910947335f85f6b222394231ac5f064d";
